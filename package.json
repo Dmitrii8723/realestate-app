@@ -5,6 +5,7 @@
   "dependencies": {
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
+    "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1"
   },
   "scripts": {
@@ -21,5 +22,14 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "clean-css": "^4.2.1",
+    "gulp": "^3.9.1",
+    "gulp-changed": "^3.2.0",
+    "gulp-clean-css": "^4.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-uglify": "^3.0.1"
+  }
 }
