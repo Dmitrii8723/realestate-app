@@ -15,7 +15,7 @@ class Header extends Component {
                             <Link to="#">Buy a Home</Link>
                         </li>
                         <li>
-                            <Link to="/Sell">Sell a Home</Link>
+                            <Link to="/sell">Sell a Home</Link>
                         </li>
                         <li>
                             <a href="#">Mortgage</a>

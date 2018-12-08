@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {Link} from "react-router-dom";
+import PropertyList from '../../containers/property-list';
 
 class SearchBar extends Component {
     render() {
@@ -24,10 +25,12 @@ class SearchBar extends Component {
                         <li>
                             <input type="text" placeholder="Enter a neighborhood"/>
                         </li>
-
                     </ul>
+                    <PropertyList/>
                 </div>
+
             </div>
+
         );
     }
 }
