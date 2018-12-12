@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
+import SearchBar from "../components/searchBarComponent/search";
 
 class PropertyList extends Component {
 
@@ -21,9 +22,16 @@ class PropertyList extends Component {
         });
     }
 
+    // newFunction() {
+    //     return (
+    //         <SearchBar passedFunction={this.createListItems}/>
+    //     );
+    // }
+
     render() {
         return (
             this.createListItems()
+      //  this.newFunction()
         );
     }
 

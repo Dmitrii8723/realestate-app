@@ -3,6 +3,12 @@ import {Link} from "react-router-dom";
 import PropertyList from '../../containers/property-list';
 
 class SearchBar extends Component {
+
+
+    pass(){
+        this.props.passedFunction(this.refs.RefToSub.value)
+    }
+
     render() {
         return (
             <div className="search">
@@ -20,10 +26,10 @@ class SearchBar extends Component {
                 <div className="subsearch">
                     <ul>
                         <li>
-                            <a href="#">#</a>
+                            <a onClick={() => this.pass()}>#</a>
                         </li>
                         <li>
-                            <input type="text" placeholder="Enter a neighborhood"/>
+                            <input type="text" ref="RefToSub"/>
                         </li>
                     </ul>
                     <PropertyList/>
