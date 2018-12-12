@@ -4,9 +4,15 @@ import PropertyList from '../../containers/property-list';
 
 class SearchBar extends Component {
 
+    constructor(props) {
+        super(props);
+        this.var = React.createRef();
+    }
 
     pass(){
-        this.props.passedFunction(this.refs.RefToSub.value)
+       this.setState(this.var)
+        console.log('What is it? :' + this.var.current.value)
+        this.props.createListItems(this.var.current.value)
     }
 
     render() {
@@ -29,7 +35,7 @@ class SearchBar extends Component {
                             <a onClick={() => this.pass()}>#</a>
                         </li>
                         <li>
-                            <input type="text" ref="RefToSub"/>
+                            <input type="text" ref={this.var}/>
                         </li>
                     </ul>
                     <PropertyList/>
