@@ -6,14 +6,19 @@ class SearchBar extends Component {
 
     constructor(props) {
         super(props);
-        this.var = React.createRef();
+        this.input = React.createRef();
+        this.state={var: null}
     }
 
+
+
     pass(){
-       this.setState(this.var)
-        console.log('What is it? :' + this.var.current.value)
-        this.props.createListItems(this.var.current.value)
+        this.setState({var: this.input.current.value})
+
+         console.log('What is it? :' + this.state.var)
     }
+
+
 
     render() {
         return (
@@ -32,13 +37,13 @@ class SearchBar extends Component {
                 <div className="subsearch">
                     <ul>
                         <li>
-                            <a onClick={() => this.pass()}>#</a>
+                            <a onClick={() => this.pass()}>Search</a>
                         </li>
                         <li>
-                            <input type="text" ref={this.var}/>
+                            <input type="text" ref={this.input} placeholder={this.props.placeholder} />
                         </li>
                     </ul>
-                    <PropertyList/>
+                    <PropertyList val={this.state.var}/>
                 </div>
 
             </div>

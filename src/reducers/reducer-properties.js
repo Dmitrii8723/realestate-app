@@ -27,7 +27,7 @@ export default function () {
             neighborhood: "Leichhardt",
             address: "23 Daniel Street",
             description: "A four bedroom apartments. For sale",
-            photo: "http://...."
+            photo: "https://i2.au.reastatic.net/800x600/7e21fc15993db21987a175429f652f1c55ef1baaca9e508742cf0b08fb2e701e/image.jpg"
         }
     ]
 }
