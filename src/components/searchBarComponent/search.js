@@ -3,6 +3,23 @@ import {Link} from "react-router-dom";
 import PropertyList from '../../containers/property-list';
 
 class SearchBar extends Component {
+
+    constructor(props) {
+        super(props);
+        this.input = React.createRef();
+        this.state={var: null}
+    }
+
+
+
+    pass(){
+        this.setState({var: this.input.current.value})
+
+         console.log('What is it? :' + this.state.var)
+    }
+
+
+
     render() {
         return (
             <div className="search">
@@ -20,13 +37,13 @@ class SearchBar extends Component {
                 <div className="subsearch">
                     <ul>
                         <li>
-                            <a href="#">#</a>
+                            <a onClick={() => this.pass()}>Search</a>
                         </li>
                         <li>
-                            <input type="text" placeholder="Enter a neighborhood"/>
+                            <input type="text" ref={this.input} placeholder={this.props.placeholder} />
                         </li>
                     </ul>
-                    <PropertyList/>
+                    <PropertyList val={this.state.var}/>
                 </div>
 
             </div>

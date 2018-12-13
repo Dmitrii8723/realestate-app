@@ -108,20 +108,29 @@ header {
 
     input {
       position: absolute;
-      background-color: lightseagreen;
       background: linear-gradient(to bottom, mediumspringgreen, lightseagreen 50%);
       border: none;
       font-family: Arial;
       color: $white;
       font-size: 20px;
-      margin-left: 0px;
+      margin-left: 20px;
       margin-bottom: 0px;
       height: 80px;
       width: 250px;
     }
 
     a {
-      margin-left: 400px;
+      color: green;
+      font-family: Arial;
+      text-decoration: none;
+      @include transition(.4s ease-in-out);
+      cursor: pointer;
+      margin-left: 350px;
+
+      &:hover {
+        color: black;
+        @include transition(.4s ease-in-out);
+      }
     }
   }
 }
